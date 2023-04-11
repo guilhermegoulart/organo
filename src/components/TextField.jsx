@@ -1,11 +1,11 @@
-export function TextField() {
+export function TextField(props) {
   return (
     <div className="my-6 mx-0">
       <label htmlFor="" className="block mb-2 text-2xl">
-        Nome
+        {props.label}
       </label>
       <input
-        placeholder="Digite seu nome"
+        placeholder={props.placeholder}
         className="bg-white shadow-3xl w-full border-none text-2xl p-6"
         type="text"
       />
