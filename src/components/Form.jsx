@@ -19,15 +19,20 @@ export function Form(props) {
   const [image, setImage] = useState("");
   const [team, setTeam] = useState("");
 
-  const whenSaving = (event) => {
+  const whenCreate = (event) => {
     event.preventDefault();
-    console.log("Form was submited => ", name, job, image, team);
+    props.forRegisteredColaborator({
+      name: name,
+      job: job,
+      image: image,
+      team: team,
+    });
   };
 
   return (
     <section className="flex justify-center ">
       <form
-        onSubmit={whenSaving}
+        onSubmit={whenCreate}
         className="my-20 mx-0 bg-cinza rounded-2xl py-4 px-16 shadow-2 "
       >
         <h2 className="text-3xl">
