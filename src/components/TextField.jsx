@@ -5,6 +5,7 @@ export function TextField(props) {
       <input
         placeholder={props.placeholder}
         className="bg-white shadow-3xl w-full border-none text-2xl p-6"
+        required={props.mandatoryField}
         type="text"
       />
     </div>

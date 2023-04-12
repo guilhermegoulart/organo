@@ -13,16 +13,32 @@ export function Form(props) {
     "Inovacão e Gestão",
   ];
 
+  const whenSaving = (event) => {
+    event.preventDefault();
+    console.log("Form was submited");
+  };
+
   return (
     <section className="flex justify-center ">
-      <form className="my-20 mx-0 bg-cinza rounded-2xl py-4 px-16 shadow-2 ">
+      <form
+        onSubmit={whenSaving}
+        className="my-20 mx-0 bg-cinza rounded-2xl py-4 px-16 shadow-2 "
+      >
         <h2 className="text-3xl">
           Preencha os dados para criar o card do colaborador.
         </h2>
-        <TextField label="Nome" placeholder="Digite seu nome" />
-        <TextField label="Cargo" placeholder="Digite seu cargo" />
+        <TextField
+          mandatoryField={true}
+          label="Nome"
+          placeholder="Digite seu nome"
+        />
+        <TextField
+          mandatoryField={true}
+          label="Cargo"
+          placeholder="Digite seu cargo"
+        />
         <TextField label="Imagem" placeholder="Informe o endereço da imagem" />
-        <DropDownList label="Time" itens={teams} />
+        <DropDownList mandatoryField={true} label="Time" itens={teams} />
         <Button>Criar card</Button>
       </form>
     </section>
