@@ -1,3 +1,4 @@
+import { Button } from "./Button";
 import { DropDownList } from "./DropdownList";
 import { TextField } from "./TextField";
 
@@ -22,6 +23,7 @@ export function Form(props) {
         <TextField label="Cargo" placeholder="Digite seu cargo" />
         <TextField label="Imagem" placeholder="Informe o endereço da imagem" />
         <DropDownList label="Time" itens={teams} />
+        <Button>Criar card</Button>
       </form>
     </section>
   );
