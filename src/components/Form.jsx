@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "./Button";
 import { DropDownList } from "./DropdownList";
 import { TextField } from "./TextField";
@@ -13,9 +14,14 @@ export function Form(props) {
     "Inovacão e Gestão",
   ];
 
+  const [name, setName] = useState("");
+  const [job, setjob] = useState("");
+  const [image, setImage] = useState("");
+  const [team, setTeam] = useState("");
+
   const whenSaving = (event) => {
     event.preventDefault();
-    console.log("Form was submited");
+    console.log("Form was submited => ", name, job, image, team);
   };
 
   return (
@@ -28,17 +34,32 @@ export function Form(props) {
           Preencha os dados para criar o card do colaborador.
         </h2>
         <TextField
-          mandatoryField={true}
           label="Nome"
+          value={name}
+          Change={(value) => setName(value)}
           placeholder="Digite seu nome"
+          mandatoryField={true}
         />
         <TextField
-          mandatoryField={true}
           label="Cargo"
           placeholder="Digite seu cargo"
+          value={job}
+          Change={(value) => setjob(value)}
+          mandatoryField={true}
         />
-        <TextField label="Imagem" placeholder="Informe o endereço da imagem" />
-        <DropDownList mandatoryField={true} label="Time" itens={teams} />
+        <TextField
+          label="Imagem"
+          placeholder="Informe o endereço da imagem"
+          value={image}
+          Change={(value) => setImage(value)}
+        />
+        <DropDownList
+          label="Time"
+          itens={teams}
+          mandatoryField={true}
+          value={team}
+          Change={(value) => setTeam(value)}
+        />
         <Button>Criar card</Button>
       </form>
     </section>
