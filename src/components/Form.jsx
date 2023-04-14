@@ -22,10 +22,10 @@ export function Form(props) {
   const whenCreate = (event) => {
     event.preventDefault();
     props.forRegisteredColaborator({
-      name: name,
-      job: job,
-      image: image,
-      team: team,
+      name,
+      job,
+      image,
+      team,
     });
   };
 

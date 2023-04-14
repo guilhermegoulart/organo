@@ -7,6 +7,9 @@ module.exports = {
       white: '#ffffff',
       cinza: '#f2f2f2',
       veryperi: '#6667AB',
+      lighgreen: '#D9F7E9',
+      green: '#57C278'
+
     },
     extend: {
       boxShadow: {
