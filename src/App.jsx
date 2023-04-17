@@ -4,6 +4,44 @@ import { Form } from "./components/Form";
 import Team from "./components/Team";
 
 function App() {
+  const teams = [
+    {
+      name: "Programação",
+      primaryColor: "#57C278",
+      secundaryColor: "#D9F7E9",
+    },
+    {
+      name: "Front-End",
+      primaryColor: "#82CFFA",
+      secundaryColor: "#E8F8FF",
+    },
+    {
+      name: "DataScience",
+      primaryColor: "#A6D157",
+      secundaryColor: "#F0F8E2",
+    },
+    {
+      name: "DevOps",
+      primaryColor: "#E06B69",
+      secundaryColor: "#FDE7E8",
+    },
+    {
+      name: "UX e Design",
+      primaryColor: "#DB6EBF",
+      secundaryColor: "#FAE9F5",
+    },
+    {
+      name: "Mobile",
+      primaryColor: "#FFBA05",
+      secundaryColor: "#FFF5D9",
+    },
+    {
+      name: "Inovacão e Gestão",
+      primaryColor: "#FF8A29",
+      secundaryColor: "#FFEEDF",
+    },
+  ];
+
   const [colaborators, setColaborators] = useState([]);
 
   const toTheNewColaborator = (colaborator) => {
@@ -19,13 +57,15 @@ function App() {
           toTheNewColaborator(colaborator)
         }
       />
-      <Team name="Programação" />
-      <Team name="Front-End" />
-      <Team name="DataScience" />
-      <Team name="DevOps" />
-      <Team name="UX e Design" />
-      <Team name="Mobile" />
-      <Team name="Inovacão e Gestão" />
+
+      {teams.map((team) => (
+        <Team
+          key={team.name}
+          name={team.name}
+          primColor={team.primaryColor}
+          secColor={team.secundaryColor}
+        />
+      ))}
     </div>
   );
 }
