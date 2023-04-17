@@ -4,16 +4,6 @@ import { DropDownList } from "./DropdownList";
 import { TextField } from "./TextField";
 
 export function Form(props) {
-  const teams = [
-    "Programação",
-    "Front-End",
-    "DataScience",
-    "DevOps",
-    "UX e Design",
-    "Mobile",
-    "Inovacão e Gestão",
-  ];
-
   const [name, setName] = useState("");
   const [job, setjob] = useState("");
   const [image, setImage] = useState("");
@@ -60,7 +50,7 @@ export function Form(props) {
         />
         <DropDownList
           label="Time"
-          itens={teams}
+          itens={props.teamsName}
           mandatoryField={true}
           value={team}
           Change={(value) => setTeam(value)}

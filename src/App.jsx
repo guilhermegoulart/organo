@@ -53,6 +53,7 @@ function App() {
     <div className="App">
       <Banner />
       <Form
+        teamsName={teams.map((team) => team.name)}
         forRegisteredColaborator={(colaborator) =>
           toTheNewColaborator(colaborator)
         }
