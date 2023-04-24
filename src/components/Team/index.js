@@ -5,7 +5,7 @@ export default function Team(props) {
   const styles = { backgroundColor: props.secColor };
   const borderStyle = { borderColor: props.primColor };
 
-  return (
+  return props.colaborators.length > 0 ? (
     <section className="time" style={styles}>
       <h3 style={borderStyle}>{props.name}</h3>
 
@@ -20,5 +20,5 @@ export default function Team(props) {
         ))}
       </div>
     </section>
-  );
+  ) : null;
 }
