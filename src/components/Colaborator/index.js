@@ -1,17 +1,14 @@
-import '../Colaborator/colaborator.css'
+import "../Colaborator/colaborator.css";
 
-export default function Colaborator(props) {
+export default function Colaborator({ name, image, job }) {
   return (
     <div className="colaborador">
-      <section className='cabecalho'>
-        <img
-          src="https://github.com/guilhermegoulart.png"
-          alt="Imagem do meu perfil do github"
-        />
+      <section className="cabecalho">
+        <img src={image} alt={name} />
       </section>
-      <section className='rodape'>
-        <h4>Guilherme</h4>
-        <h5>Developer</h5>
+      <section className="rodape">
+        <h4>{name}</h4>
+        <h5>{job}</h5>
       </section>
     </div>
   );
