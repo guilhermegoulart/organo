@@ -16,11 +16,6 @@ more knowed as Single Page Aplication, who beyond others things, React is a comp
 
 He uses JSX files, to alow us use HTML Tags in JavaScript code, there's some rules like use fragments: 
 <>
-<h1>
-    This is a Example of JSX sintax
-</h1>
-<p>As you can se</p>
-</>
 
 The way we take all this components splited in diferent files 
 and sometimes directories it's amazing, basicaly we can export tho,
