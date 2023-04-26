@@ -1,9 +1,9 @@
 import "../Colaborator/colaborator.css";
 
-export default function Colaborator({ name, image, job }) {
+export default function Colaborator({ name, image, job, bgColor }) {
   return (
     <div className="colaborador">
-      <section className="cabecalho">
+      <section className="cabecalho" style={{ backgroundColor: bgColor }}>
         <img src={image} alt={name} />
       </section>
       <section className="rodape">

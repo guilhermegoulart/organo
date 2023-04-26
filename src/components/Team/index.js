@@ -16,6 +16,7 @@ export default function Team(props) {
             name={colaborator.name}
             job={colaborator.job}
             image={colaborator.image}
+            bgColor={props.primColor}
           />
         ))}
       </div>

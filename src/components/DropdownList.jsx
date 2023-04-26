@@ -8,6 +8,7 @@ export function DropDownList(props) {
         onChange={(event) => props.Change(event.target.value)}
         required={props.required}
       >
+        <option value=""></option>
         {props.itens.map((item, index) => (
           <option key={index}>{item}</option>
         ))}
